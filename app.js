@@ -1,8 +1,3 @@
-//
-// # SimpleServer
-//
-// A simple chat server using Socket.IO, Express, and Async.
-//
 var http = require('http');
 var path = require('path');
 var bodyParser = require('body-parser');
@@ -24,5 +19,5 @@ router.post('/mail', function(req, res) {
 
 server.listen(process.env.PORT, process.env.IP, function(){
   var addr = server.address();
-  console.log("Chat server listening at", addr.address + ":" + addr.port);
+  console.log("server listening at", addr.address + ":" + addr.port);
 });
