@@ -1,0 +1,20 @@
+{
+  "name": "renbert",
+  "version": "0.0.1",
+  "description": "A simple express server for renbert",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srobledo/renbert"
+  },
+  "dependencies": {
+    "body-parser": "^1.10.2",
+    "express": "^4.11.1"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}
