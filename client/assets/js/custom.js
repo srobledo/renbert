@@ -245,13 +245,13 @@
 
 		map = new GMaps({
 			el: '#map',
-			lat: 27.998653,
-			lng: -80.638855,
-			zoom: 16,
+			lat: 6.167376,
+			lng: -75.585511,
+			zoom: 20,
 			scrollwheel: false,
 			zoomControl : false,
 			panControl : false,
-			streetViewControl : false,
+			streetViewControl : true,
 			mapTypeControl: false,
 			overviewMapControl: false,
 			styles: [{"featureType":"all","stylers":[{"saturation":-100},{"gamma":0.5}]}]
@@ -264,12 +264,12 @@
 		);
 
 		map.addMarker({
-			lat: 27.998653,
-			lng: -80.638855,
+			lat: 6.167376,
+			lng: -75.585511,
 			icon: image,
-			title: 'Elegant',
+			title: 'renbert',
 			infoWindow: {
-				content: '<p><strong>Elegant</strong><br/> We are here</p>'
+				content: '<p><strong>renbert</strong><br/> Calle 38A Sur No 38-23</p>'
 			}
 		});
 
