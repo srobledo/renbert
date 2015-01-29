@@ -247,14 +247,14 @@
 			el: '#map',
 			lat: 6.167376,
 			lng: -75.585511,
-			zoom: 20,
+			zoom: 18,
 			scrollwheel: false,
 			zoomControl : false,
-			panControl : false,
+			panControl : true,
 			streetViewControl : true,
 			mapTypeControl: false,
-			overviewMapControl: false,
-			styles: [{"featureType":"all","stylers":[{"saturation":-100},{"gamma":0.5}]}]
+			overviewMapControl: false/*,
+			styles: [{"featureType":"all","stylers":[{"saturation":-100},{"gamma":0.5}]}]*/
 		});
 
 		var image = new google.maps.MarkerImage('assets/images/map-icon.png',

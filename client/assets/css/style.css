@@ -26,7 +26,9 @@ a {
 a:hover {
 	color: #999;
 }
-
+#map-section img{
+    max-width: none;
+}
 /* ---------------------------------------------- /*
  * Typography
 /* ---------------------------------------------- */
@@ -870,7 +872,7 @@ a,
 /* ---------------------------------------------- */
 
 #contact-header {
-	background: url(../images/bg1.jpg) no-repeat center fixed;
+	background: url(../images/bg3.jpg) no-repeat center fixed;
 	-webkit-background-size: cover;
 			background-size: cover;
 }
