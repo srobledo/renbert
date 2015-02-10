@@ -20,7 +20,7 @@ img {
 }
 
 a {
-	color: #90C695;
+	color: #2381b2;
 }
 
 a:hover {
@@ -223,9 +223,9 @@ a,
 
 .btn-custom-1, .btn-custom-2 {
 	background: transparent;
-	border: 2px solid #90C695;
+	border: 2px solid #2381b2;
 	padding: 15px 25px;
-	color: #90C695;
+	color: #2381b2;
 }
 
 .btn-custom-2 {
@@ -234,8 +234,8 @@ a,
 }
 
 .btn-custom-1:hover, .btn-custom-1:focus, .btn-custom-1:active, .btn-custom-1.active {
-	background: #90C695;
-	border: 2px solid #90C695;
+	background: #2381b2;
+	border: 2px solid #2381b2;
 	color: #FFF;
 }
 
@@ -246,8 +246,8 @@ a,
 }
 
 .btn-custom-1-inverse, .btn-custom-2-inverse {
-	background: #90C695;
-	border: 2px solid #90C695;
+	background: #2381b2;
+	border: 2px solid #2381b2;
 	padding: 15px 25px;
 	color: #FFF;
 }
@@ -259,8 +259,8 @@ a,
 
 .btn-custom-1-inverse:hover, .btn-custom-1-inverse:focus, .btn-custom-1-inverse:active, .btn-custom-1-inverse.active {
 	background: transparent;
-	border: 2px solid #90C695;
-	color: #90C695;
+	border: 2px solid #2381b2;
+	color: #2381b2;
 }
 
 .btn-custom-2-inverse:hover, .btn-custom-2-inverse:focus, .btn-custom-2-inverse:active, .btn-custom-2-inverse.active {
@@ -289,7 +289,7 @@ a,
 }
 
 .skill-bar .skill-rate-on {
-	background: #90C695;
+	background: #2381b2;
 }
 
 .skill-rate-on, .skill-rate-off {
@@ -314,7 +314,7 @@ a,
 }
 
 .progress-bar {
-	background: #90C695;
+	background: #2381b2;
 	box-shadow: none;
 	text-align: right;
 	padding-right: 10px;
@@ -345,7 +345,7 @@ a,
 .nav-pills > li.active > a,
 .nav-pills>li.active>a:hover,
 .nav-pills>li.active>a:focus {
-	background: #90C695;
+	background: #2381b2;
 }
 
 /* ---------------------------------------------- /*
@@ -382,7 +382,7 @@ a,
 }
 
 .label-custom-1 {
-	background: #90C695;
+	background: #2381b2;
 }
 
 .label-custom-2 {
@@ -427,7 +427,7 @@ a,
 }
 
 .icons-widget li a:hover {
-	background: #90C695;
+	background: #2381b2;
 }
 
 .icons-widget-sm li a{
@@ -466,7 +466,7 @@ a,
 /* ---------------------------------------------- */
 
 .owl-theme .owl-controls .owl-buttons div {
-	background: #90C695;
+	background: #2381b2;
 	font-size: 24px;
 	opacity: 1;
 	width: 44px;
@@ -476,7 +476,7 @@ a,
 }
 
 .owl-theme .owl-controls .owl-page span {
-	background: #90C695;
+	background: #2381b2;
 	margin: 5px 4px;
 }
 
@@ -524,7 +524,7 @@ a,
 }
 
 .scroll-up a:hover {
-	color: #90C695;
+	color: #2381b2;
 }
 
 /* ---------------------------------------------- /*
@@ -655,7 +655,7 @@ a,
 .navbar-custom .nav li.active {
 	background: none;
 	outline: 0;
-	color: #90C695;
+	color: #2381b2;
 }
 
 .navbar-custom .navbar-brand {
@@ -676,7 +676,7 @@ a,
 
 .navbar-color,
 .custom-collapse {
-	background: #1b1212;
+	background: #000000;
 	box-shadow: 0 0 4px rgba(0, 0, 0, .2);
 	padding: 10px 0;
 }
@@ -685,7 +685,7 @@ a,
 .navbar-color .nav li a:focus,
 .navbar-color .nav li.active,
 .navbar-color .navbar-nav > li.active a {
-	color: #90C695;
+	color: #2381b2;
 }
 
 .navbar-color .navbar-nav > li > a,
@@ -705,7 +705,7 @@ a,
 
 .navbar-color .navbar-toggle .icon-bar,
 .custom-collapse .navbar-toggle .icon-bar {
-	background: #90C695;
+	background: #2381b2;
 }
 
 /* ---------------------------------------------- /*
@@ -754,7 +754,7 @@ a,
 
 .service .icon {
 	font-size: 32px;
-	color: #90C695;
+	color: #2381b2;
 }
 
 .service h4 {

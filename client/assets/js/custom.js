@@ -88,7 +88,7 @@
 		$(".custom-knob").knob({
 			font: 'Montserrat',
 			bgColor: '#C4C4C4',
-			fgColor: '#90C695',
+			fgColor: '#2381b2',
 			thickness: '0.05',
 			readOnly: true,
 			max: 100,
@@ -205,7 +205,7 @@
 
 			if (( c_name== "" || c_email == "" || c_message == "") || (!isValidEmailAddress(c_email) )) {
 				responseMessage.fadeIn(500);
-				responseMessage.html('<i class="fa fa-warning"></i> Check all fields.');
+				responseMessage.html('<i class="fa fa-warning"></i> Por favor, llenar todos los campos');
 			}
 
 			else {
