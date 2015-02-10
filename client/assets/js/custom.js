@@ -88,7 +88,7 @@
 		$(".custom-knob").knob({
 			font: 'Montserrat',
 			bgColor: '#C4C4C4',
-			fgColor: '#2381b2',
+			fgColor: '#2980b9',
 			thickness: '0.05',
 			readOnly: true,
 			max: 100,
