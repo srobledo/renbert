@@ -13,7 +13,14 @@ body {
 	font: 400 15px/1.6 'Montserrat', serif, sans-serif;
 	color: #999;
 }
-
+::selection {
+  background: #2980b9; /* WebKit/Blink Browsers */
+  color:#fff;
+}
+::-moz-selection {
+  background: #2980b9; /* Gecko Browsers */
+  color:#fff;
+}
 img {
 	max-width: 100%;
 	height: auto;
@@ -692,7 +699,7 @@ a,
 .navbar-color .navbar-nav .dropdown-menu > li > a,
 .custom-collapse .navbar-nav > li > a,
 .custom-collapse .navbar-nav .dropdown-menu > li > a {
-	color: #888;
+	color: #fff;
 }
 
 .custom-collapse .navbar-nav {

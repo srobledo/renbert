@@ -205,7 +205,7 @@
 
 			if (( c_name== "" || c_email == "" || c_message == "") || (!isValidEmailAddress(c_email) )) {
 				responseMessage.fadeIn(500);
-				responseMessage.html('<i class="fa fa-warning"></i> Por favor, llenar todos los campos');
+				responseMessage.html('<i class="fa fa-warning"></i> Por favor, diligenciar todos los campos');
 			}
 
 			else {
@@ -220,7 +220,7 @@
 					},
 					beforeSend: function(result) {
 						$('#contact-form button').empty();
-						$('#contact-form button').append('<i class="fa fa-cog fa-spin"></i> Wait...');
+						$('#contact-form button').append('<i class="fa fa-cog fa-spin"></i> Un momento...');
 					},
 					success: function(result) {
 						if(result.sendstatus == 1) {
@@ -228,7 +228,7 @@
 							responseMessage.html(result.message).fadeIn(500);
 						} else {
 							$('#contact-form button').empty();
-							$('#contact-form button').append('<i class="fa fa-retweet"></i> Try again.');
+							$('#contact-form button').append('<i class="fa fa-retweet"></i> Intentar otra vez.');
 							responseMessage.html(result.message).fadeIn(1000);
 						}
 					}
@@ -248,7 +248,7 @@
 			lat: 6.167376,
 			lng: -75.585511,
 			zoom: 18,
-			scrollwheel: false,
+			scrollwheel: true,
 			zoomControl : false,
 			panControl : true,
 			streetViewControl : true,
