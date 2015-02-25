@@ -91,7 +91,7 @@
 			fgColor: '#2980b9',
 			thickness: '0.05',
 			readOnly: true,
-			max: 100,
+			max: 20,
 			min: 0,
 			step: 1,
 			value: 0,
@@ -167,12 +167,12 @@
 			},
 			image: {
 				titleSrc: 'title',
-				tError: 'The image could not be loaded.',
+				tError: 'Error cargando la imagen.'
 			}
 		});
 
 		$('.video-pop-up').magnificPopup({
-			type: 'iframe',
+			type: 'iframe'
 		});
 
 		/* ---------------------------------------------- /*
