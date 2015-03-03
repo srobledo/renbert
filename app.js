@@ -7,12 +7,21 @@ var http = require('http'),
     server = http.createServer(router),
     port = process.env.PORT || 9000,
     nodemailer = require('nodemailer'),
-    root = path.normalize(__dirname);
+    root = path.normalize(__dirname),
+    DNS = process.argv.slice(2)[0],
+    serverUrl;
 
+if(DNS == 1){
+    serverUrl = 'https://renbert-srobledo.c9.io';
+}
+else{
+    serverUrl = 'http://localhost:9000';
+}
+console.log(serverUrl);
 var transporter = nodemailer.createTransport({
-    service: 'Gmail',
+    service: 'Hotmail',
     auth: {
-        user: 'sergiorobledo2k5@gmail.com',
+        user: 'sergiorobledo2k5@outlook.com',
         pass: 'spiderman12391+'
     }
 });
@@ -38,44 +47,38 @@ router.use(bodyParser.json({limit: '50mb'}));
 router.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 
 router.post('/mail', function(req, res) {
-
-    if(req.body.c_image == 'false'){
-        console.log(false);
-        var mailOptions = {
-            from: req.body.c_email,
-            to: 'sergiorobledo2k5@outlook.com',
-            subject: req.body.c_name + ' | renbert.com',
-            html: '<b>'+req.body.c_message+'</b>'
-        };
+    var mailOptions = {
+        from: req.body.c_email,
+        to: 'sergiorobledo2k5@gmail.com',
+        subject: req.body.c_name + ' | renbert.com',
+        html: '<b>'+req.body.c_message+'</b>'
+        },
+        message = 'Tu mensaje fue enviado con exito';
+    if(req.body && req.body.c_image == 'false'){
         transporter.sendMail(mailOptions, function(error, info){
             if(error){
                 console.log(error);
                 return res.status(200).json({sendstatus:0, message:error})
             }else{
-                return res.status(200).json({sendstatus:1, message:'Tu mensaje fue enviado con exito'});
+                return res.status(200).json({sendstatus:1, message:message});
             }
         });
     }
     else{
-        var randLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
-        var uniqid = randLetter + Date.now();
-        var imageBuffer = decodeBase64Image(req.body.c_image);
-        var imageroot = root+'/client/assets/email/'+uniqid+'.jpg';
-        var emailImage = '/assets/email/'+uniqid+'.jpg';
+        var randLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26)),
+            uniqid = randLetter + Date.now(),
+            imageBuffer = decodeBase64Image(req.body.c_image),
+            imageroot = root+'/client/assets/email/'+uniqid+'.jpg',
+            emailImage = '/assets/email/'+uniqid+'.jpg';
         fs.writeFile(imageroot, imageBuffer.data, function(err) {
             if(err){return res.status(200).json({sendstatus:0, message:'Error en el servidor'});}
-            var mailOptions = {
-                from: req.body.c_email,
-                to: 'sergiorobledo2k5@outlook.com',
-                subject: req.body.c_name + ' | renbert.com',
-                html: '<b>'+req.body.c_message+'</b> <br> <a href="http://localhost:9000'+ emailImage +'" target="_blank">Click aqui para ver la imagen</a>'
-            };
+            mailOptions.html = '<b>'+req.body.c_message+'</b> <br> <a href="'+ serverUrl + emailImage +'" target="_blank">Click aqui para ver la imagen</a>';
             transporter.sendMail(mailOptions, function(error, info){
                 if(error){
                     console.log(error);
                     return res.status(200).json({sendstatus:0, message:error})
                 }else{
-                    return res.status(200).json({sendstatus:1, message:'Tu mensaje fue enviado con exito'});
+                    return res.status(200).json({sendstatus:1, message:message});
                 }
             });
         });
