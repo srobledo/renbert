@@ -190,24 +190,45 @@
 			return pattern.test(emailAddress);
 		};
 
+
+        /* ---------------------------------------------- /*
+         * Turn image to base64
+        /* ---------------------------------------------- */
+        var base64 = false, valid = true;
+        function readImage(input) {
+            var size = input.files[0].size;
+            if(size > 5000000){return alert('El archivo debe ser menor de 5MG')}
+            if ( input.files && input.files[0] ) {
+                var FR= new FileReader();
+                FR.onload = function(e) {
+                    base64 = e.target.result;
+                    valid = true;
+                };
+                FR.readAsDataURL( input.files[0] );
+            }
+        }
+
+        $("#c_image").change(function(){
+            readImage(this);
+            valid = false;
+        });
 		/* ---------------------------------------------- /*
 		 * Contact form ajax
 		/* ---------------------------------------------- */
 
 		$("#contact-form").submit(function(e) {
-
 			e.preventDefault();
-
+            if(!valid){return console.log('uplading');}
 			var c_name = $("#c_name").val();
 			var c_email = $("#c_email").val();
 			var c_message = $("#c_message ").val();
+			var c_image = $("#c_image");
 			var responseMessage = $('#contact-form .ajax-response');
 
 			if (( c_name== "" || c_email == "" || c_message == "") || (!isValidEmailAddress(c_email) )) {
 				responseMessage.fadeIn(500);
 				responseMessage.html('<i class="fa fa-warning"></i> Por favor, diligenciar todos los campos');
 			}
-
 			else {
 				$.ajax({
 					type: "POST",
@@ -216,14 +237,16 @@
 					data: {
 						c_email: c_email,
 						c_name: c_name,
-						c_message: c_message
+						c_message: c_message,
+                        c_image: base64
 					},
-					beforeSend: function(result) {
+					beforeSend: function() {
 						$('#contact-form button').empty();
 						$('#contact-form button').append('<i class="fa fa-cog fa-spin"></i> Un momento...');
 					},
 					success: function(result) {
 						if(result.sendstatus == 1) {
+                            console.log(result);
 							$('#contact-form .ajax-hidden').fadeOut(500);
 							responseMessage.html(result.message).fadeIn(500);
 						} else {
