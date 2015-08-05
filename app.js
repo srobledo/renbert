@@ -13,7 +13,6 @@ var http = require('http'),
 
 if(DNS == 1){serverUrl = 'https://renbert-srobledo.c9.io';}
 
-console.log(serverUrl);
 var transporter = nodemailer.createTransport({
     service: 'Hotmail',
     auth: {
